@@ -1,0 +1,39 @@
+---
+title: Component design
+---
+
+<div class="padded">
+
+  <section class="readme-section">
+    <h3>Highlight.js</h3>
+
+    <div class="flex-wrap light-padded">
+      <%= partial(:card, :locals => { :titre => "Titre 1", :image => "image.jpg", :link => "/" }) %>
+      <%= partial(:card, :locals => { :titre => "Titre 2", :image => "image.jpg", :link => "/" }) %>
+      <%= partial(:card, :locals => { :titre => "Titre 3", :image => "image.jpg", :link => "/" }) %>
+    </div>
+
+    <pre>
+      <code class="ruby">
+        &lt;% link_to link do %>
+
+        &lt;div class="card">
+        &lt;div class="padd">
+        &lt;div class="img-container">
+        &lt;%= image_tag image if image %>
+        &lt;/div>
+        &lt;div class="text-padd">
+        &lt;div>
+        &lt;h3>&lt;%= titre %>&lt;/h3>
+        &lt;/div>
+        &lt;/div>
+        &lt;/div>
+        &lt;/div>
+
+        &lt;% end %>
+      </code>
+    </pre>
+  </section>
+
+
+</div>

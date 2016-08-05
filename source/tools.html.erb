@@ -14,16 +14,25 @@ title: Web tools
 
       <br>Store it in vendor folder (middleman)
       <br>Reload server</p>
-    <p>For middleman, follow every steps of this <%= link_to  "tuto", "http://www.downrightlies.net/posts/2015/05/06/how-to-get-beautiful-code-embeds-in-your-middleman-blog-using-highlight-js.html" %></p>
-  </section>
+      <p>For middleman, follow every steps of this <%= link_to  "tuto", "http://www.downrightlies.net/posts/2015/05/06/how-to-get-beautiful-code-embeds-in-your-middleman-blog-using-highlight-js.html" %></p>
+      <p><%= link_to "Read highlight usage", "https://highlightjs.org/usage/" %></p>
+      <pre>
+        <code>
+          &lt;pre>
+          &lt;code>
+          Write your code here
+          &lt;!-- don't forget &lt; => &amp;lt; and &amp; => &amp;apm; -->
+          &lt;/code>
+          &lt;/pre>
+        </code>
+      </pre>
+    </section>
 
-  <section class="readme-section">
-    <h3>Helpers</h3>
-    <pre>
-      <code>
+    <section class="readme-section">
+      <h3><%= link_to "Isotope",  "http://isotope.metafizzy.co/" %></h3>
+      <div>
+        <%= partial :isotope %>
+      </div>
+    </section>
 
-      </code>
-    </pre>
-  </section>
-
-</div>
+  </div>

@@ -8,6 +8,9 @@
 .padded {
   padding: 5em;
 }
+.light-padded {
+  padding: 1em;
+}
 
 // Backgrounds
 .bg-text {
@@ -30,5 +33,10 @@
     margin: 20px 0;
     box-shadow: 1px 1px 3px #F0F0F0;
     position: relative;
-    padding-bottom: 80px;
+    // padding-bottom: 80px;
+}
+
+.flex-wrap {
+  display: flex;
+  flex-wrap: wrap;
 }
