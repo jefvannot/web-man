@@ -2,55 +2,71 @@
 title: Git
 ---
 
-<div class="padded">
+<div class="flex padded">
 
-  <section class="readme-section">
-    <h3>Base</h3>
-    <pre>
-      <code class="bash">
-        $> git checkout -b *newbranch*    # crée une nouvelle branche
-        $> git add .
-        $> git commit -m "comment"
-        $> git push origin *newbranch*
-        # => go merge on github
-        $> git checkout master            # retour sur la branche master
-        $> git pull
+  <div class="main col-md-9">
 
-        $> git sweep                      # delete merged branches
-        OR
-        $> git checkout *newbranch*       # retour sur *newbranch*
-        $> git merge master               # fast forward => set *newbranch* as master
-      </code>
-    </pre>
-  </section>
-  <section class="readme-section">
-    <h3>Advanced</h3>
-    <pre>
-      <code class="bash">
-        $> git clean      # deletes all your untracked files/directories
-      </code>
-    </pre>
-  </section>
-  <section class="readme-section">
-    <h3>Issue : force git pull</h3>
-    <pre>
-      <code class="bash">
-        ### between a branch and the master
+    <section class="readme-section" id="base">
+      <h3>Base</h3>
+      <pre>
+        <code class="bash">
+          $> git checkout -b *newbranch*    # crée une nouvelle branche
+          $> git add .
+          $> git commit -m "comment"
+          $> git push origin *newbranch*
+          # => go merge on github
+          $> git checkout master            # retour sur la branche master
+          $> git pull
 
-        $> git fetch --all
-            # downloads the latest from remote without trying to merge or rebase
-        $> git reset --hard origin/master
-            # reset : resets the master branch to what you just fetched
-            # --hard : changes all files in your working tree to match files in master
+          $> git sweep                      # delete merged branches
+          OR
+          $> git checkout *newbranch*       # retour sur *newbranch*
+          $> git merge master               # fast forward => set *newbranch* as master
+        </code>
+      </pre>
+    </section>
 
-        ### between two branches
+    <section class="readme-section" id="advanced">
+      <h3>Advanced</h3>
+      <pre>
+        <code class="bash">
+          $> git clean      # deletes all your untracked files/directories
+        </code>
+      </pre>
+    </section>
 
-        $> git reset --hard origin/your_branch
+    <section class="readme-section" id="issues">
+      <h3>Issue : force git pull</h3>
+      <pre>
+        <code class="bash">
+          ### between a branch and the master
 
-        ### Try to git pull again
-      </code>
-    </pre>
-  </section>
+          $> git fetch --all
+          # downloads the latest from remote without trying to merge or rebase
+          $> git reset --hard origin/master
+          # reset : resets the master branch to what you just fetched
+          # --hard : changes all files in your working tree to match files in master
+
+          ### between two branches
+
+          $> git reset --hard origin/your_branch
+
+          ### Try to git pull again
+        </code>
+      </pre>
+    </section>
+
+  </div>
+
+  <div class="side-nav col-md-3">
+    <ul>
+      <% infos = data.sitemap.Git %>
+      <% infos.each do |info| %>
+      <% id =  "#" + info[1].downcase.gsub(' ', '-') %>
+      <li><%= link_to info, id %></li>
+      <% end %>
+    </ul>
+  </div>
 
 
 </div>

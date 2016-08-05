@@ -2,46 +2,60 @@
 title: Ruby
 ---
 
-<div class="padded">
+<div class="flex padded">
 
-  <section class="readme-section">
-    <h3>Start</h3>
-    <pre>
-      <code>
-        $> rails new \
-        -T --database postgresql \
-        -m ~/rails-template-device \
-        *newproject*                # init new ruby project with our starting template
-        $> cd *newproject*
+  <div class="main col-md-9">
 
-        $> git init
-        $> git add .
-        $> git commit -m "Start"
+    <section class="readme-section" id="start">
+      <h3>Start</h3>
+      <pre>
+        <code>
+          $> rails new \
+          -T --database postgresql \
+          -m ~/rails-template-device \
+          *newproject*                # init new ruby project with our starting template
+          $> cd *newproject*
 
-        $> git remote -v               # => No remotes yet! Cannot push!
+          $> git init
+          $> git add .
+          $> git commit -m "Start"
 
-        $> hub create                  # crée le repo sur github et le relie au repo local
-        $> git remote -v               # => An `origin` remote is now set!
+          $> git remote -v               # => No remotes yet! Cannot push!
 
-        $> git push -u origin master   # Push the generated rails app to GitHub
-        $> hub browse                  # Will open your browser to the new directory
+          $> hub create                  # crée le repo sur github et le relie au repo local
+          $> git remote -v               # => An `origin` remote is now set!
 
-        $> rails s
-      </code>
-    </pre>
-  </section>
+          $> git push -u origin master   # Push the generated rails app to GitHub
+          $> hub browse                  # Will open your browser to the new directory
 
-  <section class="readme-section">
-    <h3>Postgresql</h3>
-    <pre>
-      <code>
-        $> rake db:migrate
-        $> rake db:rollback
-        $> rake db:purge          #(!vide tout!)
-        $> rake db:reset
-      </code>
-    </pre>
-  </section>
+          $> rails s
+        </code>
+      </pre>
+    </section>
+
+    <section class="readme-section" id="postgresql">
+      <h3>Postgresql</h3>
+      <pre>
+        <code>
+          $> rake db:migrate
+          $> rake db:rollback
+          $> rake db:purge          #(!vide tout!)
+          $> rake db:reset
+        </code>
+      </pre>
+    </section>
+
+  </div>
+
+  <div class="side-nav col-md-3">
+    <ul>
+      <% infos = data.sitemap.Ruby %>
+      <% infos.each do |info| %>
+      <% id =  "#" + info[1].downcase.gsub(' ', '-') %>
+      <li><%= link_to info, id %></li>
+      <% end %>
+    </ul>
+  </div>
 
 </div>
 
