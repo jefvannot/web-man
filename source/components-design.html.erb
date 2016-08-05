@@ -5,7 +5,7 @@ title: Component design
 <div class="padded">
 
   <section class="readme-section">
-    <h3>Highlight.js</h3>
+    <h3>Cards - portfolio anna</h3>
 
     <div class="flex-wrap light-padded">
       <%= partial(:card, :locals => { :titre => "Titre 1", :image => "image.jpg", :link => "/" }) %>
@@ -33,6 +33,58 @@ title: Component design
         &lt;% end %>
       </code>
     </pre>
+
+    <%= link_to "View CSS", "https://raw.githubusercontent.com/jefvannot/web-man/master/source/stylesheets/components/_card.css.scss", class: "btn btn-primary", target: "_blank" %>
+  </section>
+
+  <section class="readme-section">
+    <h3>Cards - le wagon</h3>
+
+    <div class="flex-wrap light-padded">
+      <div class="card-lewagon" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('/images/image.jpg');">
+        <div class="card-lewagon-category">Popular</div>
+        <div class="card-lewagon-description">
+          <h2>Some stuff</h2>
+          <p>Very cool stuff, useful and smart</p>
+        </div>
+        <img class="card-lewagon-user avatar" src="/images/image.jpg">
+        <a class="card-lewagon-link" href="#" ></a>
+      </div>
+      <div class="card-lewagon" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('/images/image.jpg');">
+        <div class="card-lewagon-category">Popular</div>
+        <div class="card-lewagon-description">
+          <h2>Some stuff</h2>
+          <p>Very cool stuff, useful and smart</p>
+        </div>
+        <img class="card-lewagon-user avatar" src="/images/image.jpg">
+        <a class="card-lewagon-link" href="#" ></a>
+      </div>
+      <div class="card-lewagon" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('/images/image.jpg');">
+        <div class="card-lewagon-category">Popular</div>
+        <div class="card-lewagon-description">
+          <h2>Some stuff</h2>
+          <p>Very cool stuff, useful and smart</p>
+        </div>
+        <img class="card-lewagon-user avatar" src="/images/image.jpg">
+        <a class="card-lewagon-link" href="#" ></a>
+      </div>
+    </div>
+
+    <pre>
+      <code>
+        &lt;div class="card-lewagon" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('/images/image.jpg');">
+        &lt;div class="card-lewagon-category">Popular&lt;/div>
+        &lt;div class="card-lewagon-description">
+          &lt;h2>Some stuff&lt;/h2>
+          &lt;p>Very cool stuff, useful and smart&lt;/p>
+        &lt;/div>
+        &lt;img class="card-lewagon-user avatar" src="/images/image.jpg">
+        &lt;a class="card-lewagon-link" href="#" >&lt;/a>
+      &lt;/div>
+      </code>
+    </pre>
+
+    <%= link_to "View CSS", "https://raw.githubusercontent.com/jefvannot/web-man/master/source/stylesheets/components/_card.css.scss", class: "btn btn-primary", target: "_blank" %>
   </section>
 
 
