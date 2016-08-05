@@ -4,122 +4,122 @@ title: Component design
 
 <div class="flex padded">
 
-<div class="main col-md-9">
-  <section class="readme-section" id="cards">
-    <h3>Cards - portfolio anna</h3>
-    <div class="flex-wrap light-padded">
-      <% data.components_cards_filler.each do |member, infos| %>
-      <%= partial(:card, :locals => { :titre => infos.title, :image => infos.image, :link => "/" }) %>
-      <% end %>
-    </div>
-    <pre>
-      <code class="ruby">
-        &lt;% link_to link do %>
-        &lt;div class="card">
-        &lt;div class="padd">
-        &lt;div class="img-container">
-        &lt;%= image_tag image if image %>
-        &lt;/div>
-        &lt;div class="text-padd">
-        &lt;div>
-        &lt;h3>&lt;%= titre %>&lt;/h3>
-        &lt;/div>
-        &lt;/div>
-        &lt;/div>
-        &lt;/div>
-        &lt;% end %>
-      </code>
-    </pre>
-    <%= link_to "View CSS", "https://raw.githubusercontent.com/jefvannot/web-man/master/source/stylesheets/components/_card_portfolio_anna.css.scss", class: "btn btn-primary", target: "_blank" %>
-  </section>
-
-  <section class="readme-section">
-    <h3>Cards - le wagon</h3>
-    <div class="flex-wrap light-padded">
-      <% data.components_cards_filler.each do |member, infos| %>
-      <div class="card-lewagon" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('/images/image.jpg');">
-        <div class="card-lewagon-category">Popular</div>
-        <div class="card-lewagon-description">
-          <h2>Some stuff</h2>
-          <p>Very cool stuff, useful and smart</p>
-        </div>
-        <img class="card-lewagon-user avatar" src="/images/image.jpg">
-        <a class="card-lewagon-link" href="#" ></a>
+  <div class="main col-md-9">
+    <section class="readme-section" id="cards">
+      <h3>Cards - portfolio anna</h3>
+      <div class="flex-wrap light-padded">
+        <% data.components_cards_filler.each do |member, infos| %>
+        <%= partial(:card, :locals => { :titre => infos.title, :image => infos.image, :link => "/" }) %>
+        <% end %>
       </div>
-      <% end %>
-    </div>
-    <pre>
-      <code>
-        &lt;div class="card-lewagon" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('/images/image.jpg');">
-        &lt;div class="card-lewagon-category">Popular&lt;/div>
-        &lt;div class="card-lewagon-description">
-        &lt;h2>Some stuff&lt;/h2>
-        &lt;p>Very cool stuff, useful and smart&lt;/p>
-        &lt;/div>
-        &lt;img class="card-lewagon-user avatar" src="/images/image.jpg">
-        &lt;a class="card-lewagon-link" href="#" >&lt;/a>
-        &lt;/div>
-      </code>
-    </pre>
-    <%= link_to "View CSS", "https://raw.githubusercontent.com/jefvannot/web-man/master/source/stylesheets/components/_card_lewagon.scss", class: "btn btn-primary", target: "_blank" %>
-  </section>
+      <pre>
+        <code class="ruby">
+          &lt;% link_to link do %>
+          &lt;div class="card">
+          &lt;div class="padd">
+          &lt;div class="img-container">
+          &lt;%= image_tag image if image %>
+          &lt;/div>
+          &lt;div class="text-padd">
+          &lt;div>
+          &lt;h3>&lt;%= titre %>&lt;/h3>
+          &lt;/div>
+          &lt;/div>
+          &lt;/div>
+          &lt;/div>
+          &lt;% end %>
+        </code>
+      </pre>
+      <%= link_to "View CSS", "https://raw.githubusercontent.com/jefvannot/web-man/master/source/stylesheets/components/_card_portfolio_anna.css.scss", class: "btn btn-primary", target: "_blank" %>
+    </section>
 
-  <section class="readme-section">
-    <h3>Cards - Lomimachine</h3>
-    <div class="flex-wrap light-padded">
-      <% data.components_cards_filler.each do |member, infos| %>
-      <div class="card-lomimachine">
-        <div class="card-lomimachine-img">
-          <%= image_tag infos.image %>
+    <section class="readme-section">
+      <h3>Cards - le wagon</h3>
+      <div class="flex-wrap light-padded">
+        <% data.components_cards_filler.each do |member, infos| %>
+        <div class="card-lewagon" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('/images/image.jpg');">
+          <div class="card-lewagon-category">Popular</div>
+          <div class="card-lewagon-description">
+            <h2>Some stuff</h2>
+            <p>Very cool stuff, useful and smart</p>
+          </div>
+          <img class="card-lewagon-user avatar" src="/images/image.jpg">
+          <a class="card-lewagon-link" href="#" ></a>
         </div>
-        <div class="card-lomimachine-text">
-          <h2><%= infos.title.titleize %></h2>
-          <h4>Some stuff</h4>
-        </div>
-        <div class="card-lomimachine-user">
-        </div>
-        <div class="card-lomimachine-link"></div>
+        <% end %>
       </div>
-      <% end %>
-    </div>
-    <pre>
-      <code class="ruby">
-        &lt;div class="card-lomimachine">
-        &lt;div class="card-lomimachine-img">
-        &lt;%= image_tag image.jpg %>
-        &lt;/div>
-        &lt;div class="card-lomimachine-text">
-        &lt;h2>Titre&lt;/h2>
-        &lt;h4>Some stuff&lt;/h4>
-        &lt;/div>
-        &lt;div class="card-lomimachine-user">
-        &lt;/div>
-        &lt;div class="card-lomimachine-link">&lt;/div>
-        &lt;/div>
-      </code>
-    </pre>
-    <%= link_to "View CSS", "https://raw.githubusercontent.com/jefvannot/web-man/master/source/stylesheets/components/_card_lomimachine.css.scss", class: "btn btn-primary", target: "_blank" %>
-  </section>
+      <pre>
+        <code>
+          &lt;div class="card-lewagon" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('/images/image.jpg');">
+          &lt;div class="card-lewagon-category">Popular&lt;/div>
+          &lt;div class="card-lewagon-description">
+          &lt;h2>Some stuff&lt;/h2>
+          &lt;p>Very cool stuff, useful and smart&lt;/p>
+          &lt;/div>
+          &lt;img class="card-lewagon-user avatar" src="/images/image.jpg">
+          &lt;a class="card-lewagon-link" href="#" >&lt;/a>
+          &lt;/div>
+        </code>
+      </pre>
+      <%= link_to "View CSS", "https://raw.githubusercontent.com/jefvannot/web-man/master/source/stylesheets/components/_card_lewagon.scss", class: "btn btn-primary", target: "_blank" %>
+    </section>
 
-  <section class="readme-section" id="buttons">
-    <h3>Button close</h3>
-    <div class="flex-wrap light-padded">
-      <button type="button" class="button-close-green" data-dismiss="modal" aria-label="Close">
-        <span aria-hidden="true">&times;</span>
-      </button>
-    </div>
-    <pre>
-      <code class="html">
-        &lt;button type="button" class="button-close-green" data-dismiss="modal" aria-label="Close">
-        &lt;span aria-hidden="true">&times;&lt;/span>
-        &lt;/button>
-      </code>
-    </pre>
-    <%= link_to "View CSS", "https://raw.githubusercontent.com/jefvannot/web-man/master/source/stylesheets/components/_button_close_green.scss", class: "btn btn-primary", target: "_blank" %>
-  </section>
+    <section class="readme-section">
+      <h3>Cards - Lomimachine</h3>
+      <div class="flex-wrap light-padded">
+        <% data.components_cards_filler.each do |member, infos| %>
+        <div class="card-lomimachine">
+          <div class="card-lomimachine-img">
+            <%= image_tag infos.image %>
+          </div>
+          <div class="card-lomimachine-text">
+            <h2><%= infos.title.titleize %></h2>
+            <h4>Some stuff</h4>
+          </div>
+          <div class="card-lomimachine-user">
+          </div>
+          <div class="card-lomimachine-link"></div>
+        </div>
+        <% end %>
+      </div>
+      <pre>
+        <code class="ruby">
+          &lt;div class="card-lomimachine">
+          &lt;div class="card-lomimachine-img">
+          &lt;%= image_tag image.jpg %>
+          &lt;/div>
+          &lt;div class="card-lomimachine-text">
+          &lt;h2>Titre&lt;/h2>
+          &lt;h4>Some stuff&lt;/h4>
+          &lt;/div>
+          &lt;div class="card-lomimachine-user">
+          &lt;/div>
+          &lt;div class="card-lomimachine-link">&lt;/div>
+          &lt;/div>
+        </code>
+      </pre>
+      <%= link_to "View CSS", "https://raw.githubusercontent.com/jefvannot/web-man/master/source/stylesheets/components/_card_lomimachine.css.scss", class: "btn btn-primary", target: "_blank" %>
+    </section>
 
-  <section class="readme-section" id="buttons">
-    <h3>Avatar</h3>
+    <section class="readme-section" id="buttons">
+      <h3>Button close</h3>
+      <div class="flex-wrap light-padded">
+        <button type="button" class="button-close-green" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <pre>
+        <code class="html">
+          &lt;button type="button" class="button-close-green" data-dismiss="modal" aria-label="Close">
+          &lt;span aria-hidden="true">&times;&lt;/span>
+          &lt;/button>
+        </code>
+      </pre>
+      <%= link_to "View CSS", "https://raw.githubusercontent.com/jefvannot/web-man/master/source/stylesheets/components/_button_close_green.scss", class: "btn btn-primary", target: "_blank" %>
+    </section>
+
+    <section class="readme-section" id="avatars">
+      <h3>Avatar</h3>
       <div class="flex-wrap light-padded">
         <%= image_tag 'image.jpg', { :class => 'avatar', :alt => 'user' }%>
         <%= image_tag 'image.jpg', { :class => 'avatar-large', :alt => 'user' }%>
@@ -127,22 +127,23 @@ title: Component design
         <%= image_tag 'image.jpg', { :class => 'avatar-square', :alt => 'user' }%>
       </div>
       <pre>
-      <code class="ruby">
-        &lt;%= image_tag 'image.jpg', { :class => 'avatar', :alt => 'user' }%>
-        &lt;%= image_tag 'image.jpg', { :class => 'avatar-large', :alt => 'user' }%>
-        &lt;%= image_tag 'image.jpg', { :class => 'avatar-bordered', :alt => 'user' }%>
-        &lt;%= image_tag 'image.jpg', { :class => 'avatar-square', :alt => 'user' }%>
-      </div>
-    </pre>
-    <%= link_to "View CSS", "https://raw.githubusercontent.com/jefvannot/web-man/master/source/stylesheets/components/_button_close_green.scss", class: "btn btn-primary", target: "_blank" %>
-  </section>
-</div>
+        <code class="ruby">
+          &lt;%= image_tag 'image.jpg', { :class => 'avatar', :alt => 'user' }%>
+          &lt;%= image_tag 'image.jpg', { :class => 'avatar-large', :alt => 'user' }%>
+          &lt;%= image_tag 'image.jpg', { :class => 'avatar-bordered', :alt => 'user' }%>
+          &lt;%= image_tag 'image.jpg', { :class => 'avatar-square', :alt => 'user' }%>
+        </code>
+      </pre>
+      <%= link_to "View CSS", "https://raw.githubusercontent.com/jefvannot/web-man/master/source/stylesheets/components/_avatar.scss", class: "btn btn-primary", target: "_blank" %>
+    </section>
+  </div>
 
-<div class="side-nav col-md-3">
-  <ul>
-    <li><%= link_to "Cards", "#cards" %></li>
-    <li><%= link_to "Buttons", "#buttons" %></li>
-  </ul>
-</div>
+  <div class="side-nav col-md-3">
+    <ul>
+      <li><%= link_to "Cards", "#cards" %></li>
+      <li><%= link_to "Buttons", "#buttons" %></li>
+      <li><%= link_to "Avatars", "#avatars" %></li>
+    </ul>
+  </div>
 
 </div>
