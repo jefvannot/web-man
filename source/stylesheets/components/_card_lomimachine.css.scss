@@ -1,0 +1,58 @@
+.card-lomimachine {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 275px;
+    background-color: #fff;
+    color: $gray-dark;
+    position: relative;
+    border: solid 1px $grey-lighter;
+    border-radius: 4px;
+    margin: 10px;
+    padding: 10px 20px 10px 10px;
+    h4 {
+      font-size: 17px;
+      margin-top: 0;
+    }
+    p {
+      font-size: 14px;
+      margin: 0;
+    }
+  }
+  .card-lomimachine-img {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    // flex: 2;
+    height: 70%;
+    flex: 3;
+    img {
+      max-height: 80%;
+      max-width: 80%;
+    }
+  }
+  .card-lomimachine-text {
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+    justify-content: center;
+    flex: 2;
+  }
+  .card-lomimachine-user {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+  }
+  .card-lomimachine-link {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index:2;
+    background: black;
+    opacity: 0;
+  }
+  .card-lomimachine-link:hover{
+    opacity: 0.1;
+  }

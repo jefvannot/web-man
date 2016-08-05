@@ -4,7 +4,7 @@ title: Web tricks
 
 <div class="welcome text-center padded">
 
-  <% data.cards.each do |member, infos| %>
+  <% data.homepage_cards.each do |member, infos| %>
   <%= partial(:card, :locals => { :titre => member, :image => infos.image, :link => infos.link }) %>
   <% end %>
 
