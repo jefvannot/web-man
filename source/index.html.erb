@@ -4,27 +4,8 @@ title: Web tricks
 
 <div class="welcome text-center padded">
 
-  <% link_to "/middleman.html" do %>
-  <%= partial(:card, :locals => { :autre => 1 }) %>
+  <% data.cards.each do |member, infos| %>
+  <%= partial(:card, :locals => { :titre => member, :image => infos.image, :link => infos.link }) %>
   <% end %>
-
-  <% link_to "/ruby" do %>
-  <%= partial :card %>
-  <% end %>
-
-<% link_to "/tools.html" do %>
-  <div class="card">
-    <div class="padd">
-      <div class="img-container">
-        <%= image_tag "/images/tools.jpg" %>
-      </div>
-      <div class="text-padd">
-        <div>
-          <h3>Web tools</h3>
-        </div>
-      </div>
-    </div>
-  </div>
-<% end %>
 
 </div>

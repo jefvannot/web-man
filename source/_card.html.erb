@@ -1,12 +1,16 @@
+<% link_to link do %>
+
 <div class="card">
   <div class="padd">
     <div class="img-container">
-      <%= image_tag "/images/middleman.png" %>
+      <%= image_tag image if image %>
     </div>
     <div class="text-padd">
       <div>
-        <h3>Middleman</h3>
+        <h3><%= titre %></h3>
       </div>
     </div>
   </div>
 </div>
+
+<% end %>

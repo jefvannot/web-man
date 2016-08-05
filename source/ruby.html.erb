@@ -1,0 +1,48 @@
+---
+title: Ruby
+---
+
+<div class="padded">
+
+  <section class="readme-section">
+    <h3>Start</h3>
+    <pre>
+      <code>
+        $> rails new \
+        -T --database postgresql \
+        -m ~/rails-template-device \
+        *newproject*                # init new ruby project with our starting template
+        $> cd *newproject*
+
+        $> git init
+        $> git add .
+        $> git commit -m "Start"
+
+        $> git remote -v               # => No remotes yet! Cannot push!
+
+        $> hub create                  # crée le repo sur github et le relie au repo local
+        $> git remote -v               # => An `origin` remote is now set!
+
+        $> git push -u origin master   # Push the generated rails app to GitHub
+        $> hub browse                  # Will open your browser to the new directory
+
+        $> rails s
+      </code>
+    </pre>
+  </section>
+
+  <section class="readme-section">
+    <h3>Postgresql</h3>
+    <pre>
+      <code>
+        $> rake db:migrate
+        $> rake db:rollback
+        $> rake db:purge          #(!vide tout!)
+        $> rake db:reset
+      </code>
+    </pre>
+  </section>
+
+</div>
+
+

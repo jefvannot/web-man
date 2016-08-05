@@ -21,13 +21,110 @@ title: Middleman
   </section>
 
   <section class="readme-section">
-    <h3>Helpers</h3>
+    <h3>Launch on Github</h3>
     <pre>
       <code>
-        &lt;div>test&lt;/div>
+        $> git clone https://github.com/jefvannot/middlemann_ready.git *nom-du-projet*
+        $> cd *nom-du-projet*
+        $> rm -rf .git
+        $> git init
+        $> git add .
+        $> git commit -m "start"
+        $> hub create # crée le repo sur github et le relie au repo local
+        $> git push origin master
       </code>
     </pre>
   </section>
+
+  <section class="readme-section">
+    <h3>Helpers</h3>
+    <p><%= link_to "Helpers doc", "https://middlemanapp.com/basics/helper_methods/" %></p>
+
+    <pre>
+      <code class="ruby">
+        &lt;%= link_to 'My Site', 'http://mysite.com' %>
+
+        &lt;% link_to 'http://mysite.com' do %>
+        &lt;%= image_tag 'mylogo.png' %>
+        &lt;% end %>
+
+        &lt;%= lorem.sentences 5 %>
+      </code>
+    </pre>
+  </section>
+
+
+  <section class="readme-section">
+    <h3>Partials</h3>
+    <p><%= link_to "Partials doc", "https://middlemanapp.com/basics/partials/" %></p>
+
+    <pre>
+      <code class="ruby">
+        &lt;%= partial "footer" %>
+
+        &lt;%= partial(:paypal_donate_button, :locals => { :amount => 1, :amount_text => "Pay $1" }) %>
+      </code>
+    </pre>
+  </section>
+
+  <section class="readme-section">
+    <h3>Local Data</h3>
+    <p>Create as many data/database.yml as you want (flats.yml, team.yml..)</p>
+
+    <p>Solution 1 : Array</p>
+    <pre>
+      <code>
+        # team.yml
+        - name: Anna
+        role: CIO
+        - name: Gwenda
+        role: CTO
+      </code>
+    </pre>
+    <p>Will be parsed as: </p>
+    <pre>
+      <code>
+        data.team #=> [{"name" => "Anna", "role" => "CIO"}, {"name" => "Gwenda", "role" => "CTO"}]
+      </code>
+    </pre>
+
+    <p>Solution 2 : Hash</p>
+    <pre>
+      <code>
+       # team.yml
+       anna:
+       picture: anna.png
+       role: CIO
+       gwenda:
+       picture: gwenda.png
+       role: CTO
+     </code>
+   </pre>
+   <p>Will be parsed as: </p>
+   <pre>
+    <code>
+      data.team #=> {
+      #     "anna" => {"picture" => "anna.png", "role" => "CIO"},
+      #     "gwenda" => {"picture" => "gwenda.png", "role" => "CTO"}
+      #   }
+    </code>
+  </pre>
+
+  <p>Then loop:</p>
+  <pre>
+    <code class="ruby html">
+      &lt;% data.team.each do |member, infos| %>
+      &lt;div class="col-md-4">
+      &lt;div class="card">
+      &lt;%= image_tag infos.picture, class: "img-thumbnail" %>
+      &lt;h2>&lt;%= member.capitalize %>&lt;/h2>
+      &lt;p>&lt;%= infos.role %>&lt;/p>
+      &lt;/div>
+      &lt;/div>
+      &lt;% end %>
+    </code>
+  </pre>
+</section>
 
 </div>
 

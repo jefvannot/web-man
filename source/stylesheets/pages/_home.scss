@@ -1,41 +1,4 @@
 .welcome {
   display: flex;
-  justify-content: space-around;
-  align-items: center;
+  flex-wrap: wrap;
 }
-
-.card {
-  .padd {
-    -webkit-filter: brightness(100%);
-    margin: 5px;
-    background: #fff;
-    border-radius: 6px;
-    -webkit-cursor: pointer;
-    cursor: pointer;
-    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.22);
-    -webkit-box-shadow: 0 1px 2px 0 rgba(0,0,0,0.22);
-    .text-padd {
-      padding: 5px 12px;
-      h3 {
-        font-size: 0.9em;
-        line-height: 1.7em;
-        letter-spacing: 0.01em;
-        color: $grey-dark;
-        padding-bottom: 0vh;
-      }
-      h4 {
-        color: $grey-dark;
-        font-size: 0.9em;
-        line-height: 1.7em;
-        letter-spacing: 0.01em;
-      }
-    }
-  }
-  img {
-    max-width: 30vh;
-    -webkit-border-radius: 6px 6px 0 0;
-    -moz-border-radius: 6px 6px 0 0;
-    border-radius: 6px 6px 0 0;
-  }
-}
-
