@@ -1,0 +1,17 @@
+Middelman:
+  image: middleman.png
+  link: /middleman.html
+Ruby:
+  image: ruby.png
+  link: /ruby.html
+Git:
+  image: git.png
+  link: /git.html
+Components design:
+  link: /components-design.html
+Codepen:
+  image: codepen.png
+  link: /codepen.html
+Tools:
+  image: tools.jpg
+  link: /tools.html
