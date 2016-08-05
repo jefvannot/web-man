@@ -8,9 +8,9 @@ title: Component design
     <h3>Cards - portfolio anna</h3>
 
     <div class="flex-wrap light-padded">
-      <%= partial(:card, :locals => { :titre => "Titre 1", :image => "image.jpg", :link => "/" }) %>
-      <%= partial(:card, :locals => { :titre => "Titre 2", :image => "image.jpg", :link => "/" }) %>
-      <%= partial(:card, :locals => { :titre => "Titre 3", :image => "image.jpg", :link => "/" }) %>
+      <% data.components_cards_filler.each do |member, infos| %>
+      <%= partial(:card, :locals => { :titre => infos.title, :image => infos.image, :link => "/" }) %>
+      <% end %>
     </div>
 
     <pre>
@@ -34,13 +34,14 @@ title: Component design
       </code>
     </pre>
 
-    <%= link_to "View CSS", "https://raw.githubusercontent.com/jefvannot/web-man/master/source/stylesheets/components/_card.css.scss", class: "btn btn-primary", target: "_blank" %>
+    <%= link_to "View CSS", "https://raw.githubusercontent.com/jefvannot/web-man/master/source/stylesheets/components/_card_portfolio_anna.css.scss", class: "btn btn-primary", target: "_blank" %>
   </section>
 
   <section class="readme-section">
     <h3>Cards - le wagon</h3>
-
     <div class="flex-wrap light-padded">
+
+      <% data.components_cards_filler.each do |member, infos| %>
       <div class="card-lewagon" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('/images/image.jpg');">
         <div class="card-lewagon-category">Popular</div>
         <div class="card-lewagon-description">
@@ -50,24 +51,8 @@ title: Component design
         <img class="card-lewagon-user avatar" src="/images/image.jpg">
         <a class="card-lewagon-link" href="#" ></a>
       </div>
-      <div class="card-lewagon" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('/images/image.jpg');">
-        <div class="card-lewagon-category">Popular</div>
-        <div class="card-lewagon-description">
-          <h2>Some stuff</h2>
-          <p>Very cool stuff, useful and smart</p>
-        </div>
-        <img class="card-lewagon-user avatar" src="/images/image.jpg">
-        <a class="card-lewagon-link" href="#" ></a>
-      </div>
-      <div class="card-lewagon" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('/images/image.jpg');">
-        <div class="card-lewagon-category">Popular</div>
-        <div class="card-lewagon-description">
-          <h2>Some stuff</h2>
-          <p>Very cool stuff, useful and smart</p>
-        </div>
-        <img class="card-lewagon-user avatar" src="/images/image.jpg">
-        <a class="card-lewagon-link" href="#" ></a>
-      </div>
+      <% end %>
+
     </div>
 
     <pre>
@@ -75,17 +60,60 @@ title: Component design
         &lt;div class="card-lewagon" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('/images/image.jpg');">
         &lt;div class="card-lewagon-category">Popular&lt;/div>
         &lt;div class="card-lewagon-description">
-          &lt;h2>Some stuff&lt;/h2>
-          &lt;p>Very cool stuff, useful and smart&lt;/p>
+        &lt;h2>Some stuff&lt;/h2>
+        &lt;p>Very cool stuff, useful and smart&lt;/p>
         &lt;/div>
         &lt;img class="card-lewagon-user avatar" src="/images/image.jpg">
         &lt;a class="card-lewagon-link" href="#" >&lt;/a>
-      &lt;/div>
+        &lt;/div>
       </code>
     </pre>
 
-    <%= link_to "View CSS", "https://raw.githubusercontent.com/jefvannot/web-man/master/source/stylesheets/components/_card.css.scss", class: "btn btn-primary", target: "_blank" %>
+    <%= link_to "View CSS", "https://raw.githubusercontent.com/jefvannot/web-man/master/source/stylesheets/components/_card_lewagon.scss", class: "btn btn-primary", target: "_blank" %>
   </section>
+
+  <section class="readme-section">
+    <h3>Cards - Lomimachine</h3>
+    <div class="flex-wrap light-padded">
+      <% data.components_cards_filler.each do |member, infos| %>
+      <div class="card-lomimachine">
+        <div class="card-lomimachine-img">
+          <%= image_tag infos.image %>
+        </div>
+        <div class="card-lomimachine-text">
+          <h2><%= infos.title.titleize %></h2>
+          <h4>Some stuff</h4>
+        </div>
+        <div class="card-lomimachine-user">
+        </div>
+        <div class="card-lomimachine-link"></div>
+      </div>
+      <% end %>
+    </div>
+    <pre>
+      <code class="ruby">
+       &lt;div class="card-lomimachine">
+       &lt;div class="card-lomimachine-img">
+       &lt;%= image_tag image.jpg %>
+       &lt;/div>
+       &lt;div class="card-lomimachine-text">
+       &lt;h2>Titre&lt;/h2>
+       &lt;h4>Some stuff&lt;/h4>
+       &lt;/div>
+       &lt;div class="card-lomimachine-user">
+       &lt;/div>
+       &lt;div class="card-lomimachine-link">&lt;/div>
+       &lt;/div>
+     </code>
+   </pre>
+    <%= link_to "View CSS", "https://raw.githubusercontent.com/jefvannot/web-man/master/source/stylesheets/components/_card_lewagon.scss", class: "btn btn-primary", target: "_blank" %>
+
+
+ </section>
+
+
+
+
 
 
 </div>
