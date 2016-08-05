@@ -6,17 +6,14 @@ title: Component design
 
   <section class="readme-section">
     <h3>Cards - portfolio anna</h3>
-
     <div class="flex-wrap light-padded">
       <% data.components_cards_filler.each do |member, infos| %>
       <%= partial(:card, :locals => { :titre => infos.title, :image => infos.image, :link => "/" }) %>
       <% end %>
     </div>
-
     <pre>
       <code class="ruby">
         &lt;% link_to link do %>
-
         &lt;div class="card">
         &lt;div class="padd">
         &lt;div class="img-container">
@@ -29,18 +26,15 @@ title: Component design
         &lt;/div>
         &lt;/div>
         &lt;/div>
-
         &lt;% end %>
       </code>
     </pre>
-
     <%= link_to "View CSS", "https://raw.githubusercontent.com/jefvannot/web-man/master/source/stylesheets/components/_card_portfolio_anna.css.scss", class: "btn btn-primary", target: "_blank" %>
   </section>
 
   <section class="readme-section">
     <h3>Cards - le wagon</h3>
     <div class="flex-wrap light-padded">
-
       <% data.components_cards_filler.each do |member, infos| %>
       <div class="card-lewagon" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('/images/image.jpg');">
         <div class="card-lewagon-category">Popular</div>
@@ -52,9 +46,7 @@ title: Component design
         <a class="card-lewagon-link" href="#" ></a>
       </div>
       <% end %>
-
     </div>
-
     <pre>
       <code>
         &lt;div class="card-lewagon" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('/images/image.jpg');">
@@ -68,7 +60,6 @@ title: Component design
         &lt;/div>
       </code>
     </pre>
-
     <%= link_to "View CSS", "https://raw.githubusercontent.com/jefvannot/web-man/master/source/stylesheets/components/_card_lewagon.scss", class: "btn btn-primary", target: "_blank" %>
   </section>
 
@@ -106,14 +97,24 @@ title: Component design
        &lt;/div>
      </code>
    </pre>
-    <%= link_to "View CSS", "https://raw.githubusercontent.com/jefvannot/web-man/master/source/stylesheets/components/_card_lewagon.scss", class: "btn btn-primary", target: "_blank" %>
-
-
+   <%= link_to "View CSS", "https://raw.githubusercontent.com/jefvannot/web-man/master/source/stylesheets/components/_card_lomimachine.css.scss", class: "btn btn-primary", target: "_blank" %>
  </section>
 
-
-
-
+ <section class="readme-section">
+   <h3>Button close</h3>
+   <div class="flex-wrap light-padded">
+    <button type="button" class="button-close-green" data-dismiss="modal" aria-label="Close">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <pre>
+    <code class="html">
+      &lt;button type="button" class="button-close-green" data-dismiss="modal" aria-label="Close">
+      &lt;span aria-hidden="true">&times;&lt;/span>
+      &lt;/button>
+    </code>
+  </pre>
+</section>
 
 
 </div>
