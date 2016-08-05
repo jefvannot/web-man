@@ -2,3 +2,25 @@
   display: flex;
   flex-wrap: wrap;
 }
+
+
+
+.side-nav {
+  position: fixed;
+  ul {
+    list-style: none;
+  }
+  li>a {
+    display: block;
+    padding: 4px 20px;
+    font-size: 13px;
+    font-weight: 500;
+    color: #767676;
+  }
+  li>a:hover, li>a:focus {
+    color: #563d7c;
+    text-decoration: none;
+    border-left: 2px solid #563d7c;
+        padding-left: 18px;
+  }
+}

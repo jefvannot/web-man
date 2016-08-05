@@ -2,9 +2,10 @@
 title: Component design
 ---
 
-<div class="padded">
+<div class="flex padded">
 
-  <section class="readme-section">
+<div class="main col-md-9">
+  <section class="readme-section" id="cards">
     <h3>Cards - portfolio anna</h3>
     <div class="flex-wrap light-padded">
       <% data.components_cards_filler.each do |member, infos| %>
@@ -83,38 +84,65 @@ title: Component design
     </div>
     <pre>
       <code class="ruby">
-       &lt;div class="card-lomimachine">
-       &lt;div class="card-lomimachine-img">
-       &lt;%= image_tag image.jpg %>
-       &lt;/div>
-       &lt;div class="card-lomimachine-text">
-       &lt;h2>Titre&lt;/h2>
-       &lt;h4>Some stuff&lt;/h4>
-       &lt;/div>
-       &lt;div class="card-lomimachine-user">
-       &lt;/div>
-       &lt;div class="card-lomimachine-link">&lt;/div>
-       &lt;/div>
-     </code>
-   </pre>
-   <%= link_to "View CSS", "https://raw.githubusercontent.com/jefvannot/web-man/master/source/stylesheets/components/_card_lomimachine.css.scss", class: "btn btn-primary", target: "_blank" %>
- </section>
+        &lt;div class="card-lomimachine">
+        &lt;div class="card-lomimachine-img">
+        &lt;%= image_tag image.jpg %>
+        &lt;/div>
+        &lt;div class="card-lomimachine-text">
+        &lt;h2>Titre&lt;/h2>
+        &lt;h4>Some stuff&lt;/h4>
+        &lt;/div>
+        &lt;div class="card-lomimachine-user">
+        &lt;/div>
+        &lt;div class="card-lomimachine-link">&lt;/div>
+        &lt;/div>
+      </code>
+    </pre>
+    <%= link_to "View CSS", "https://raw.githubusercontent.com/jefvannot/web-man/master/source/stylesheets/components/_card_lomimachine.css.scss", class: "btn btn-primary", target: "_blank" %>
+  </section>
 
- <section class="readme-section">
-   <h3>Button close</h3>
-   <div class="flex-wrap light-padded">
-    <button type="button" class="button-close-green" data-dismiss="modal" aria-label="Close">
-      <span aria-hidden="true">&times;</span>
-    </button>
-  </div>
-  <pre>
-    <code class="html">
-      &lt;button type="button" class="button-close-green" data-dismiss="modal" aria-label="Close">
-      &lt;span aria-hidden="true">&times;&lt;/span>
-      &lt;/button>
-    </code>
-  </pre>
-</section>
+  <section class="readme-section" id="buttons">
+    <h3>Button close</h3>
+    <div class="flex-wrap light-padded">
+      <button type="button" class="button-close-green" data-dismiss="modal" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    <pre>
+      <code class="html">
+        &lt;button type="button" class="button-close-green" data-dismiss="modal" aria-label="Close">
+        &lt;span aria-hidden="true">&times;&lt;/span>
+        &lt;/button>
+      </code>
+    </pre>
+    <%= link_to "View CSS", "https://raw.githubusercontent.com/jefvannot/web-man/master/source/stylesheets/components/_button_close_green.scss", class: "btn btn-primary", target: "_blank" %>
+  </section>
 
+  <section class="readme-section" id="buttons">
+    <h3>Avatar</h3>
+      <div class="flex-wrap light-padded">
+        <%= image_tag 'image.jpg', { :class => 'avatar', :alt => 'user' }%>
+        <%= image_tag 'image.jpg', { :class => 'avatar-large', :alt => 'user' }%>
+        <%= image_tag 'image.jpg', { :class => 'avatar-bordered', :alt => 'user' }%>
+        <%= image_tag 'image.jpg', { :class => 'avatar-square', :alt => 'user' }%>
+      </div>
+      <pre>
+      <code class="ruby">
+        &lt;%= image_tag 'image.jpg', { :class => 'avatar', :alt => 'user' }%>
+        &lt;%= image_tag 'image.jpg', { :class => 'avatar-large', :alt => 'user' }%>
+        &lt;%= image_tag 'image.jpg', { :class => 'avatar-bordered', :alt => 'user' }%>
+        &lt;%= image_tag 'image.jpg', { :class => 'avatar-square', :alt => 'user' }%>
+      </div>
+    </pre>
+    <%= link_to "View CSS", "https://raw.githubusercontent.com/jefvannot/web-man/master/source/stylesheets/components/_button_close_green.scss", class: "btn btn-primary", target: "_blank" %>
+  </section>
+</div>
+
+<div class="side-nav col-md-3">
+  <ul>
+    <li><%= link_to "Cards", "#cards" %></li>
+    <li><%= link_to "Buttons", "#buttons" %></li>
+  </ul>
+</div>
 
 </div>
