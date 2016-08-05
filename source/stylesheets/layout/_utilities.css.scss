@@ -6,8 +6,7 @@
 
 // Paddings
 .padded {
-  padding-top: 5em;
-  padding-bottom: 5em;
+  padding: 5em;
 }
 
 // Backgrounds
@@ -22,4 +21,14 @@
 }
 .bg-facebook {
   background: #3b5998;
+}
+
+// Sections
+.readme-section {
+    background-color: #FAFAFA;
+    padding: 20px;
+    margin: 20px 0;
+    box-shadow: 1px 1px 3px #F0F0F0;
+    position: relative;
+    padding-bottom: 80px;
 }

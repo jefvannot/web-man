@@ -1,10 +1,30 @@
 ---
-title: Middleman
+title: Web tricks
 ---
 
 <div class="welcome text-center padded">
-  <h1>Welcome to Middleman</h1>
-  <p class="doc">
-    <%= link_to "Middlemann Doc", "http://middlemanapp.com/" %>
-  </p>
+
+  <% link_to "/middleman.html" do %>
+  <%= partial(:card, :locals => { :autre => 1 }) %>
+  <% end %>
+
+  <% link_to "/ruby" do %>
+  <%= partial :card %>
+  <% end %>
+
+<% link_to "/tools.html" do %>
+  <div class="card">
+    <div class="padd">
+      <div class="img-container">
+        <%= image_tag "/images/tools.jpg" %>
+      </div>
+      <div class="text-padd">
+        <div>
+          <h3>Web tools</h3>
+        </div>
+      </div>
+    </div>
+  </div>
+<% end %>
+
 </div>
