@@ -1,0 +1,16 @@
+<div class="navbar-item">
+  <div class="dropdown">
+    <p class="dropdown-toggle" id="navbar-menu" data-toggle="dropdown"><%= chapter.titleize %></p>
+    <ul class="dropdown-menu dropdown-menu-right navbar-dropdown-menu">
+      <% chapter = chapter.gsub(' ', '-') %>
+      <% if infos %>
+      <% infos.each do |info| %>
+      <li><%= link_to info[1], "#{chapter}.html" %></li>
+
+      <% end %>
+      <% end %>
+
+    </ul>
+
+  </div>
+</div>

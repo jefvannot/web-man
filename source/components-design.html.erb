@@ -5,6 +5,7 @@ title: Component design
 <div class="flex padded">
 
   <div class="main col-md-9">
+
     <section class="readme-section" id="cards">
       <h3>Cards - portfolio anna</h3>
       <div class="flex-wrap light-padded">
@@ -140,9 +141,11 @@ title: Component design
 
   <div class="side-nav col-md-3">
     <ul>
-      <li><%= link_to "Cards", "#cards" %></li>
-      <li><%= link_to "Buttons", "#buttons" %></li>
-      <li><%= link_to "Avatars", "#avatars" %></li>
+      <% infos = data.sitemap.Components_design %>
+      <% infos.each do |info| %>
+      <% id =  "#" + info[1].downcase.gsub(' ', '-') %>
+      <li><%= link_to info, id %></li>
+      <% end %>
     </ul>
   </div>
 

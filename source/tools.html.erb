@@ -2,13 +2,15 @@
 title: Web tools
 ---
 
-<div class="padded">
+<div class="flex padded">
 
-  <section class="readme-section" id="smooth-scroll">
+  <div class="main col-md-9">
+
+    <section class="readme-section" id="smooth-scroll">
       <h3>Smooth scroll</h3>
       <p>To made a scroll inside a page smoothy</p>
       <ul>
-        <li><p>Add <%= link_to "scrollReveal.js", "https://raw.githubusercontent.com/jefvannot/web-man/master/source/stylesheets/components/_avatar.scss", target: "_blank" %> and <%= link_to "smooth_scroll.js", "https://raw.githubusercontent.com/jefvannot/web-man/master/source/stylesheets/components/_avatar.scss", target: "_blank" %> to your javascript folder</p></li>
+        <li><p>Add <%= link_to "scrollReveal.js", "https://raw.githubusercontent.com/jefvannot/web-man/master/source/javascripts/scrollReveal.js", target: "_blank" %> and <%= link_to "smooth_scroll.js", "https://raw.githubusercontent.com/jefvannot/web-man/master/source/javascripts/smooth_scroll.js", target: "_blank" %> to your javascript folder</p></li>
         <li><p>Add an 'id' to the element you whant to scroll to</p></li>
         <li><p>Add a link to this element: <pre><code>&lt;%= link_to "Elem", "#id" %></code></pre></p></li>
       </ul>
@@ -17,16 +19,17 @@ title: Web tools
       </div>
     </section>
 
-  <section class="readme-section">
-    <h3>Highlight.js</h3>
-    <h4>Code syntax highlighter</h4>
-    <p>Get the <%= link_to "highlight.pack.js", "https://highlightjs.org/download/" %>
-      <br>Put it in javascript folder
-      <br>Active it in js
-      <br>Choose a <%= link_to  "highlight css style", "https://github.com/isagalaev/highlight.js/tree/master/src/styles" %>
+    <section class="readme-section" id="highlight">
+      <h3>Highlight.js</h3>
+      <h4>Code syntax highlighter</h4>
+      <p>Get the <%= link_to "highlight.pack.js", "https://highlightjs.org/download/" %>
+        <br>Put it in javascript folder
+        <br>Active it in js
+        <br>Choose a <%= link_to  "highlight css style", "https://github.com/isagalaev/highlight.js/tree/master/src/styles" %>
 
-      <br>Store it in vendor folder (middleman)
-      <br>Reload server</p>
+        <br>Store it in vendor folder (middleman)
+        <br>Reload server
+      </p>
       <p>For middleman, follow every steps of this <%= link_to  "tuto", "http://www.downrightlies.net/posts/2015/05/06/how-to-get-beautiful-code-embeds-in-your-middleman-blog-using-highlight-js.html" %></p>
       <p><%= link_to "Read highlight usage", "https://highlightjs.org/usage/" %></p>
       <pre>
@@ -41,11 +44,22 @@ title: Web tools
       </pre>
     </section>
 
-    <section class="readme-section">
+    <section class="readme-section" id ="isotope">
       <h3><%= link_to "Isotope",  "http://isotope.metafizzy.co/" %></h3>
       <div>
         <%= partial :isotope %>
       </div>
     </section>
-
   </div>
+
+  <div class="side-nav col-md-3">
+    <ul>
+      <% infos = data.sitemap.Tools %>
+      <% infos.each do |info| %>
+      <% id =  "#" + info[1].downcase.gsub(' ', '-') %>
+      <li><%= link_to info, id %></li>
+      <% end %>
+    </ul>
+  </div>
+
+</div>

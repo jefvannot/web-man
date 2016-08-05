@@ -1,0 +1,22 @@
+Middleman:
+  1: Start
+  2: Launch on Github
+  3: Helpers
+  4: Partials
+  5: Local data
+Ruby:
+  1: Start
+  2: PosgreySQL
+Git:
+  1: Base
+  2: Advanced
+  3: Issues
+Components_design:
+  1: Cards
+  2: Buttons
+  3: Avatars
+Codepen:
+Tools:
+  1: Smooth scroll
+  2: Highlight
+  3: Isotope
